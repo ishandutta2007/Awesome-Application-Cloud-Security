@@ -32,79 +32,30 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The Application Security market is estimated at ~$12.6B–$15.9B in 2026, while the broader Cloud Security sector is projected at ~$46.1B–$60.3B. The market remains **moderately fragmented**—populated by numerous niche point tools across SAST, SCA, and posture management—but is rapidly consolidating into unified platforms (CNAPP & ASPM) led by tech giants and top cybersecurity platforms.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Wiz](https://www.wiz.io/)**
-
-  **Cloud security platform** with a unified security graph correlating cloud infrastructure, workloads, and code. **Pricing**: Quote-only; enterprise contracts. **Free tier**: None. **Best for**: enterprises wanting agentless cloud discovery with risk correlation across the full stack.
-
-
-
-- **[Snyk](https://snyk.io/)**
-
-  **Developer-first security platform** covering SCA, SAST, containers, and IaC. **Pricing**: Free tier for open source; paid plans per developer. **Free tier**: Yes, limited tests. **Best for**: development teams wanting to embed security into IDEs and CI/CD with minimal friction.
-
-
-
-- **[Prisma Cloud](https://www.paloaltonetworks.com/prisma/cloud)** (Palo Alto Networks)
-
-  **Cloud native application protection platform (CNAPP)** with CSPM, CWPP, and code security. **Pricing**: Quote-only. **Free tier**: None. **Best for**: enterprises wanting comprehensive cloud security from code to runtime.
-
-
-
-- **[GitHub Advanced Security](https://github.com/features/security)**
-
-  **Native security for GitHub** with CodeQL, secret scanning, and dependency review. **Pricing**: Per-committer for private repos; free for public. **Free tier**: CodeQL free for public repos. **Best for**: GitHub-centric teams wanting integrated code scanning without third-party tools.
-
-
-
-- **[Veracode](https://www.veracode.com/)**
-
-  **Application security testing** platform with SAST, DAST, and SCA. **Pricing**: Quote-only. **Free tier**: None. **Best for**: enterprises wanting a mature, compliance-oriented AppSec suite.
-
-
-
-- **[Checkmarx](https://checkmarx.com/)**
-
-  **Application security platform** with SAST, SCA, and API security. **Pricing**: Quote-only. **Free tier**: None. **Best for**: organizations wanting deep code analysis with strong enterprise integrations.
-
-
-
-- **[Aqua Security](https://www.aquasec.com/)**
-
-  **Cloud native security** with container scanning, runtime protection, and CSPM. **Pricing**: Quote-only. **Free tier**: Limited. **Best for**: teams prioritizing container and Kubernetes security.
-
-
-
-- **[Mend.io](https://www.mend.io/)** (formerly WhiteSource)
-
-  **SCA and application security** platform with automated remediation. **Pricing**: Quote-only. **Free tier**: Limited for open source. **Best for**: organizations needing deep open-source license and vulnerability management.
-
-
-
-- **[Datadog AppSec](https://www.datadoghq.com/)**
-
-  **Application security** integrated into Datadog's observability platform. **Pricing**: Quote-only; bundled with Datadog. **Free tier**: None for AppSec. **Best for**: Datadog customers wanting security findings alongside observability data.
-
-
-
-- **[Atlassian Security](https://www.atlassian.com/security)**
-
-  **Security capabilities** across Atlassian Cloud products. **Pricing**: Included with Atlassian subscriptions; advanced features quote-based. **Free tier**: Limited. **Best for**: Atlassian-centric organizations wanting security visibility across Jira, Confluence, and Bitbucket.
-
-
+| Company / Product | Category & Description | Scale (Revenue / Valuation) | Pricing (Starting Tier) | Free Tier / Trial Limits | Best For |
+|---|---|---|---|---|---|
+| **[GitHub Advanced Security](https://github.com/features/security)** | Native code security (CodeQL SAST, secret scanning, dependency review) | ~$3.1T parent (Microsoft) / ~$4B+ ARR | $19/committer/mo (Secret Protection) or $30/committer/mo (Code Security); $49/committer/mo full suite (annual contract, req. Team/Enterprise) | **Permanently Free** for public open-source repositories; 30-day trial with GitHub Enterprise Cloud | GitHub-centric teams wanting integrated scanning without third-party agents |
+| **[Prisma Cloud](https://www.paloaltonetworks.com/prisma/cloud)** | Comprehensive CNAPP (CSPM, CWPP, code security, runtime defense) | ~$115B+ market cap (Palo Alto Networks) / ~$4.2B+ ARR (NGS) | Starts at ~$18,000/year (CSPM entry pool) or ~$45,000/year (Full CNAPP suite) via credit licensing | **15-day free trial** (via AWS Marketplace PAYG) or sales-coordinated enterprise POC | Enterprises requiring end-to-end cloud protection from code to runtime |
+| **[Datadog AppSec](https://www.datadoghq.com/)** | Application Security Management (ASM) & API protection in observability platform | ~$40B+ market cap (Datadog) / ~$2.6B+ ARR | $31 per host / month (billed annually, requires Datadog APM/Infrastructure) | **14-day free trial** with full access to App & API Protection and unified telemetry | Datadog observability users seeking unified telemetry and application runtime threat defense |
+| **[Atlassian Security](https://www.atlassian.com/security)** (Atlassian Guard) | Centralized identity, access management, and threat detection across Jira, Confluence & Bitbucket | ~$35B–$40B market cap (Atlassian) / ~$4.4B+ ARR | $4.00–$4.35/user/mo (Guard Standard) or $8.00–$8.55/user/mo (Guard Premium); included in Cloud Enterprise | **30-day free trial** for Guard Standard/Premium; test policies configurable for up to 5 pilot users | Atlassian-centric organizations managing user governance and data loss prevention |
+| **[Wiz](https://www.wiz.io/)** | Agentless cloud security platform & ASPM with unified security graph | $12B valuation (Series E) / ~$500M+ ARR | Starts at ~$24,000/year for 100 workloads (Wiz Essential) or ~$38,000/year (Wiz Advanced) | **No public automated free tier**; sales-led Proof of Value (POV) evaluation scoped for 14–30 days | Large multi-cloud enterprises needing agentless discovery with cross-stack risk correlation |
+| **[Snyk](https://snyk.io/)** | Developer-first security platform (SCA, SAST, containers, IaC) | $7.4B valuation / ~$250M+ ARR | $25 per contributing developer / month (Team plan, max 10 devs); custom quote for Enterprise | **Permanently Free**: max 5 projects, 100 SAST tests/mo, 200 SCA tests/mo, 100 container tests/mo, 300 IaC tests/mo | Developer teams looking to embed automated security testing into IDEs and CI/CD pipelines |
+| **[Veracode](https://www.veracode.com/)** | Enterprise application security testing platform (SAST, DAST, SCA) | $2.5B valuation (TA Associates / Thoma Bravo) / ~$300M+ revenue | Starts at ~$10,000–$15,000/year (SAST base tier) to ~$20,000+/year (DAST); bundled suites from $50k+/year | **No public permanent free tier**; targeted 14-day trials for select modules (e.g., Dynamic Analysis / Labs) and sales POCs | Enterprises with stringent compliance needs wanting mature, enterprise-wide AppSec programs |
+| **[Checkmarx](https://checkmarx.com/)** | Application security testing platform (SAST, SCA, DAST, API Security) | $1.15B valuation (Hellman & Friedman) / ~$150M–$200M revenue | Starts at ~$30,000/year minimum via AWS Marketplace / private offers; mid-market ~$50k–$200k/year | **No public permanent free tier**; 30-day trials for developer IDE extensions & sales-coordinated custom POCs | Organizations seeking deep AST analysis and strong enterprise developer tool integration |
+| **[Aqua Security](https://www.aquasec.com/)** | Cloud-native security platform (container security, runtime defense, CSPM) | $1B+ valuation (Series E unicorn) / ~$90M ARR | Enterprise tiers start at ~$10,000–$25,000/year depending on protected workload/cluster count | **Permanently Free open-source scanner (Trivy)**; commercial platform available via 14–30 day sales POC | Organizations with heavy container, Kubernetes, and cloud-native runtime security priorities |
+| **[Mend.io](https://www.mend.io/)** | Application security and open-source vulnerability/license governance | ~$500M+ valuation / ~$70M+ ARR | Starts at ~$1,000/developer/year (core modules); enterprise agreements average ~$60,000/year | **Permanently Free (Mend Bolt)**: up to 5 scans per repository/day on unlimited public & private repositories | Security teams prioritizing open-source license compliance and automated dependency remediation |
 
 ## Open-Source GitHub Projects
 
