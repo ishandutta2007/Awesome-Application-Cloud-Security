@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Application-Cloud-Security/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Application-Cloud-Security?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Application-Cloud-Security/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Application-Cloud-Security?style=flat-square&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Application-Cloud-Security/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Application-Cloud-Security?style=flat-square&logo=github&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Application-Cloud-Security/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Application-Cloud-Security?style=flat-square&color=red" alt="Open Issues"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Application-Cloud-Security/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
@@ -26,7 +26,7 @@
 - [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [🏢 SaaS & Hosted Commercial Platforms](#-saas--hosted-commercial-platforms)
 - [💻 Open-Source Security Tools & Platforms](#-open-source-security-tools--platforms)
-  - [Top Open-Source Projects (Ranked by GitHub Stars)](#top-open-source-projects-ranked-by-github-stars)
+  - [Top Open-Source Projects (Ranked by GitHub_Stars)](#top-open-source-projects-ranked-by-github-stars)
   - [Architectural Roles & Open-Source AppSec Stacks](#architectural-roles--open-source-appsec-stacks)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [💖 Support & Sponsorship](#-support--sponsorship)
@@ -64,7 +64,7 @@ Commercial platforms deliver turnkey correlation across infrastructure, workload
 
 Open-source tooling empowers teams to maintain self-hosted, sovereign, and privacy-respecting security pipelines without vendor lock-in.
 
-### Top Open-Source Projects (Ranked by GitHub Stars)
+### Top Open-Source Projects (Ranked by GitHub_Stars)
 
 The following repositories represent essential tools across Container Security, Secrets Detection, SAST, DAST, SCA, CSPM, and ASPM, sorted in descending order by popularity:
 
@@ -198,7 +198,7 @@ When architecting a comprehensive self-hosted security foundation, combine tools
 Contributions are welcome! Please follow these steps to propose new tools or updates:
 
 1. **Fork the repository** on GitHub.
-2. **Add or update an entry** in `README.md` maintaining proper markdown tables, emojis, and star badges.
+2. **Add or update an entry** in `README.md` maintaining proper markdown tables, emojis, and Stars_Badges.
 3. **Include essential details**: Tool name, repository link, category, license, key features, and best-for use cases.
 4. **Submit a pull request** with a concise description of your changes.
 
