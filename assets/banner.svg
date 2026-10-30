@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="glowViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e0c3fc" />
+      <stop offset="100%" stop-color="#8ec5fc" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.45" />
+    </pattern>
+
+    <!-- Filter Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #94a3b8;
+    }
+    .tagline-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 2px;
+      fill: #00f2fe;
+      text-transform: uppercase;
+    }
+    .pill-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #e2e8f0;
+    }
+    .node-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+
+    /* Ambient dynamic animations */
+    @keyframes pulseOrb {
+      0% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+      50% { transform: scale(1.18) translate(15px, -15px); opacity: 0.6; }
+      100% { transform: scale(1) translate(0px, 0px); opacity: 0.35; }
+    }
+    @keyframes beamFlow {
+      0% { stroke-dashoffset: 240; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes radarSweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatPill {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .ambient-orb-1 {
+      animation: pulseOrb 8s ease-in-out infinite;
+      transform-origin: 200px 100px;
+    }
+    .ambient-orb-2 {
+      animation: pulseOrb 10s ease-in-out infinite reverse;
+      transform-origin: 1000px 250px;
+    }
+    .stream-beam {
+      stroke-dasharray: 20 60;
+      animation: beamFlow 3.5s linear infinite;
+    }
+    .stream-beam-reverse {
+      stroke-dasharray: 30 70;
+      animation: beamFlow 4.5s linear infinite reverse;
+    }
+    .radar-rotator {
+      transform-origin: 1050px 150px;
+      animation: radarSweep 12s linear infinite;
+    }
+    .pill-group {
+      animation: floatPill 5s ease-in-out infinite;
+    }
+    .pill-group:nth-child(2) {
+      animation-delay: -1.8s;
+    }
+    .pill-group:nth-child(3) {
+      animation-delay: -3.2s;
+    }
+  </style>
+
+  <!-- Deep Canvas Background -->
+  <rect width="1200" height="420" rx="18" fill="url(#bgGrad)" />
+  <rect width="1200" height="420" rx="18" fill="url(#grid)" />
+
+  <!-- Ambient Dynamic Lighting Orbs (in Background) -->
+  <g>
+    <circle class="ambient-orb-1" cx="220" cy="120" r="140" fill="#00f2fe" filter="url(#softGlow)" />
+    <circle class="ambient-orb-2" cx="980" cy="220" r="160" fill="#7f00ff" filter="url(#softGlow)" />
+    <circle cx="600" cy="380" r="180" fill="#0284c7" opacity="0.18" filter="url(#softGlow)" />
+  </g>
+
+  <!-- Background Dynamic Network Connections -->
+  <g opacity="0.45">
+    <path d="M 120 340 Q 300 240 500 310 T 880 290 T 1140 180" fill="none" stroke="#1e293b" stroke-width="2" />
+    <path class="stream-beam" d="M 120 340 Q 300 240 500 310 T 880 290 T 1140 180" fill="none" stroke="#00f2fe" stroke-width="2.5" filter="url(#glow)" />
+
+    <path d="M 60 120 Q 350 40 680 140 T 1120 90" fill="none" stroke="#1e293b" stroke-width="1.8" />
+    <path class="stream-beam-reverse" d="M 60 120 Q 350 40 680 140 T 1120 90" fill="none" stroke="#a855f7" stroke-width="2" filter="url(#glow)" />
+  </g>
+
+  <!-- Radar / Security Scanner Dynamic Graphic Element (Upper Right) -->
+  <g opacity="0.55">
+    <circle cx="1050" cy="150" r="90" fill="none" stroke="#334155" stroke-width="1.2" stroke-dasharray="4 4" />
+    <circle cx="1050" cy="150" r="60" fill="none" stroke="#0284c7" stroke-width="1.5" opacity="0.6" />
+    <circle cx="1050" cy="150" r="30" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.8" />
+    <g class="radar-rotator">
+      <line x1="1050" y1="150" x2="1140" y2="150" stroke="#00f2fe" stroke-width="2" filter="url(#glow)" />
+      <polygon points="1050,150 1135,120 1140,150" fill="url(#shieldGrad)" opacity="0.25" />
+    </g>
+    <circle cx="1050" cy="150" r="4" fill="#00f2fe" filter="url(#glow)" />
+  </g>
+
+  <!-- Foreground Title and Hero Typography (Always fully visible & clear) -->
+  <g transform="translate(80, 85)">
+    <!-- Security Tagline Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="320" height="28" rx="14" fill="#0f172a" stroke="#0284c7" stroke-width="1" />
+      <circle cx="16" cy="14" r="5" fill="#00f2fe">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="32" y="19" class="tagline-text">Curated Security Ecosystem</text>
+    </g>
+
+    <!-- Main Repository Title -->
+    <text x="0" y="80" class="title-text">Awesome Application &amp; Cloud Security</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="122" class="subtitle-text">
+      The definitive index of modern ASPM, CSPM, CNAPP, SAST, SCA &amp; Container Security
+    </text>
+  </g>
+
+  <!-- Interactive / Floating Category Feature Badges (Pills) -->
+  <g transform="translate(80, 248)">
+    <!-- Pill 1: ASPM -->
+    <g class="pill-group" transform="translate(0, 0)">
+      <rect width="180" height="52" rx="12" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.2" />
+      <circle cx="28" cy="26" r="10" fill="#0284c7" opacity="0.3" />
+      <text x="23" y="30" font-size="14" fill="#38bdf8">🛡️</text>
+      <text x="50" y="27" class="pill-label">ASPM &amp; Posture</text>
+      <text x="50" y="42" class="node-text">Code-to-Cloud</text>
+    </g>
+
+    <!-- Pill 2: CSPM & CNAPP -->
+    <g class="pill-group" transform="translate(200, 0)">
+      <rect width="195" height="52" rx="12" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1.2" />
+      <circle cx="28" cy="26" r="10" fill="#6366f1" opacity="0.3" />
+      <text x="23" y="30" font-size="14" fill="#818cf8">☁️</text>
+      <text x="50" y="27" class="pill-label">CSPM &amp; CNAPP</text>
+      <text x="50" y="42" class="node-text" fill="#a5b4fc">Multi-Cloud Guard</text>
+    </g>
+
+    <!-- Pill 3: SAST & Code Security -->
+    <g class="pill-group" transform="translate(415, 0)">
+      <rect width="190" height="52" rx="12" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.2" />
+      <circle cx="28" cy="26" r="10" fill="#9333ea" opacity="0.3" />
+      <text x="23" y="30" font-size="14" fill="#c084fc">🔍</text>
+      <text x="50" y="27" class="pill-label">SAST &amp; CodeQL</text>
+      <text x="50" y="42" class="node-text" fill="#d8b4fe">Taint &amp; Data Flow</text>
+    </g>
+
+    <!-- Pill 4: SCA & Supply Chain -->
+    <g class="pill-group" transform="translate(625, 0)">
+      <rect width="195" height="52" rx="12" fill="url(#cardGrad)" stroke="#34d399" stroke-width="1.2" />
+      <circle cx="28" cy="26" r="10" fill="#059669" opacity="0.3" />
+      <text x="23" y="30" font-size="14" fill="#34d399">📦</text>
+      <text x="50" y="27" class="pill-label">SCA &amp; SBOM</text>
+      <text x="50" y="42" class="node-text" fill="#6ee7b7">Open-Source Risk</text>
+    </g>
+
+    <!-- Pill 5: Container & Secrets -->
+    <g class="pill-group" transform="translate(840, 0)">
+      <rect width="200" height="52" rx="12" fill="url(#cardGrad)" stroke="#f59e0b" stroke-width="1.2" />
+      <circle cx="28" cy="26" r="10" fill="#d97706" opacity="0.3" />
+      <text x="23" y="30" font-size="14" fill="#fbbf24">🔐</text>
+      <text x="50" y="27" class="pill-label">Secrets &amp; Runtime</text>
+      <text x="50" y="42" class="node-text" fill="#fde68a">Trivy &amp; TruffleHog</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Status Bar -->
+  <g transform="translate(80, 335)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="#1e293b" stroke-width="1" />
+    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">
+      ⚡ Automated CI/CD Gates • Shift-Left Intelligence • Zero False-Positive Triage • Enterprise Compliance
+    </text>
+  </g>
+</svg>
